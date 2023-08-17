@@ -13,7 +13,7 @@ const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Sa
 const blurDiv = document.getElementById('blur');
 
 async function getWeather () {
-    const apiCall = await fetch(`http://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=${loc.value}&aqi=no`);
+    const apiCall = await fetch(`https://api.weatherapi.com/v1/current.json?key=${APIKEY}&q=${loc.value}&aqi=no`);
     const locationData = await apiCall.json();
     populateApp(locationData);
 }
